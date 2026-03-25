@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-pink: #ff00ff;
+  --color-neon-blue: #00f2ff;
+  --color-neon-purple: #bc13fe;
+  --color-neon-green: #39ff14;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-white font-sans selection:bg-neon-pink/30;
+  }
+}
+
+.neon-border {
+  box-shadow: 0 0 5px theme('colors.neon-blue'), 0 0 10px theme('colors.neon-blue');
+}
+
+.neon-text-pink {
+  text-shadow: 0 0 5px theme('colors.neon-pink'), 0 0 10px theme('colors.neon-pink');
+}
+
+.neon-text-blue {
+  text-shadow: 0 0 5px theme('colors.neon-blue'), 0 0 10px theme('colors.neon-blue');
+}
+
+.neon-glow-green {
+  box-shadow: 0 0 15px theme('colors.neon-green');
+}
